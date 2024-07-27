@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import { UserLogin } from '../src/pages/Auth/userLogin.jsx'
-import { UserRegistration } from '../src/pages/Auth/userRegistration.jsx'
+import Home from './pages/User/Home'
+import { Link } from "react-router-dom";
 
 function App() {
 
   return (
     <>
-        <UserLogin />
-
-        <UserRegistration />
+      <Home />
     </>
   )
 }
