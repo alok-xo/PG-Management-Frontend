@@ -42,9 +42,10 @@ export const UserLogin = () => {
                         </a>
                     </div>
                     <div className="mt-8">
-                        <button className="bg-blue-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600">
-                            Login
-                        </button>
+                    <button className="bg-[#1E3A8A] text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600">
+    Login
+</button>
+
                     </div>
                     {/* <a
                         href="#"
