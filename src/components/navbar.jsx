@@ -84,7 +84,7 @@ export const Navbar = () => {
                                 to="/userLogin"
                                 aria-label="Sign in"
                                 title="Sign in"
-                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-indigo-700"
                             >
                                 Sign in
                             </Link>
@@ -92,7 +92,7 @@ export const Navbar = () => {
                         <li>
                             <Link
                                 to="/userRegistration"
-                                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-light-blue-400 hover:bg-light-blue-700 focus:shadow-outline focus:outline-none"
+                                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-light-blue-700 focus:shadow-outline focus:outline-none"
                                 aria-label="Sign up"
                                 title="Sign up"
                             >

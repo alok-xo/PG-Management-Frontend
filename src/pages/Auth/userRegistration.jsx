@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/login.css"
+import { GrHide, GrView } from "react-icons/gr";
+
+
 export const UserRegistration = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword((prev) => !prev);
+    };
+
     return (
         <>
             <div className="h-[100vh] items-center flex justify-center px-5 lg:px-0">
@@ -14,12 +25,12 @@ export const UserRegistration = () => {
                         ></div>
                     </div>
                     <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-                        <b><Link to="/">⬅️home</Link></b>
+                        <Link to="/"><i class="ri-arrow-left-circle-line"></i> home</Link>
                         <div className=" flex flex-col items-center">
                             <div className="text-center">
 
                                 <h1 className="text-2xl xl:text-4xl font-extrabold text-blue-900">
-                                    Student Sign up
+                                    Guest Sign up
                                 </h1>
                                 <p className="text-[12px] text-gray-500">
                                     Hey enter your details to create your account
@@ -44,9 +55,14 @@ export const UserRegistration = () => {
                                     />
                                     <input
                                         className="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                        type="password"
+                                        type={showPassword ? "text" : "password"}
                                         placeholder="Password"
                                     />
+                                    <div className="relative">
+                                        <div onClick={togglePasswordVisibility} className="icon" style={{ top: "-37.5px" }}>
+                                            {showPassword ? <GrHide /> : <GrView />}
+                                        </div>
+                                    </div>
                                     <button className="mt-5 tracking-wide font-semibold bg-blue-900 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                         <svg
                                             className="w-6 h-6 -ml-2"
